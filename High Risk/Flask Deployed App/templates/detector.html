@@ -1,0 +1,87 @@
+<html>
+{% extends 'base.html' %}
+{% block pagetitle %}
+    Planticks - Detector
+{% endblock pagetitle %}
+{% block body %}
+    <!-- Main -->
+    <div id="main" class="alt">
+
+        <!-- One -->
+        <section id="one">
+            <div class="inner">
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-4 col-12-medium">
+                        <h3>What is the significance of detecting diseases in plants?</h3>
+                        <p>Detecting plant diseases is essential because they have a significant impact
+                            on the growth and development of plants. Identifying the disease and the causative
+                            agent is crucial for effective disease control measures to prevent further plant
+                            losses. Early detection and diagnosis of plant diseases are also critical to minimizing
+                            the damage caused by the disease, as some diseases may not have visible symptoms until they
+                            have already spread significantly. Therefore, plant pathologists undergo rigorous training
+                            to develop expertise in disease diagnosis. Proper disease diagnosis is necessary to ensure
+                            that control measures are not a waste of resources and to maintain healthy plant growth.</p>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <div class="col mx-auto">
+{#                            <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">#}
+                            <article>
+                                <span class="image fit">
+                                    <img src="https://www.pngjoy.com/pngl/250/4840262_plants-png-indoors-tropical-plant-png-hd-png.png">
+                                </span>
+                            </article>
+
+                    <!-- Default bootstrap file upload-->
+
+                    <form action="/submit" method="POST" enctype="multipart/form-data">
+                        <div class="custom-file overflow-hidden mb-4">
+{#                            <input type="file" id="actual-btn" hidden name="image" />#}
+{#                            <label for="actual-btn">Choose File</label>#}
+                            <button type="button" class="button small" onclick="document.getElementById('actual-btn').click()">Choose File</button>
+<input type="file" id="actual-btn" hidden name="image" />
+                            <span id="file-chosen">No file chosen</span>
+                        </div>
+                        <br>
+
+                        <!-- Custom bootstrap upload file-->
+                            <a class="mx-2"><button type="submit" class="button primary fit">Submit</button></a>
+                    </form>
+                    <!-- End -->
+
+{#                </div>#}
+            </div>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <h3>Here are some steps to prevent plant diseases:</h3>
+                        <p>
+                        <ol>
+                            <li>Practice good sanitation methods to prevent the spread of disease.</li>
+                            <li>Keep your plants healthy by fertilizing them properly.</li>
+                            <li>Check for signs of disease before buying new plants.</li>
+                            <li>Wait until the soil is warm enough before planting.</li>
+                            <li>Maintain a healthy vegetable garden by rotating your crops.</li>
+                            <li>Ensure that there is good air circulation around your plants.</li>
+                            <li>Remove any stems or leaves that show signs of disease.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+    const actualBtn = document.getElementById('actual-btn');
+
+    const fileChosen = document.getElementById('file-chosen');
+
+    actualBtn.addEventListener('change', function () {
+        fileChosen.textContent = this.files[0].name
+    })
+</script>
+{% endblock body %}
+</html>

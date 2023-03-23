@@ -1,0 +1,44 @@
+<html>
+{% extends 'base.html' %}
+{% block pagetitle %}
+    Planticks - Result
+{% endblock pagetitle %}
+{% block body %}
+
+    <div id="main" class="alt">
+
+        <!-- One -->
+        <section id="one">
+            <div class="inner">
+                <header class="major">
+                    <h1>{{ title }}</h1>
+                </header>
+
+                <p>
+                    <span class="image left"><img src={{ image_url }} alt="Leaf-Image"/></span>
+                <h4>
+                    {% if pred==3 or pred==5 or pred==7 or pred==11 or pred==15 or pred==18 or pred==20 or pred==23 or
+                                        pred==24 or pred==25 or pred==28 or pred==38 %}
+                        Tips to Grow Healthy Plants :
+                    {% else %}
+                        Brief Description :
+                    {% endif %}
+                </h4>
+                {{ desc }}
+                </p>
+
+                <h4>
+                    {% if pred==3 or pred==5 or pred==7 or pred==11 or pred==15 or pred==18 or pred==20 or pred==23 or
+                pred==24 or pred==25 or pred==28 or pred==38 %}
+                        Benefits :
+                    {% else %}
+                        Prevention strategies :
+                    {% endif %}
+                </h4>
+                <p>{{ prevent }}</p>
+            </div>
+        </section>
+
+    </div>
+{% endblock body %}
+</html>
